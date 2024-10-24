@@ -1,0 +1,7 @@
+1. Performance improvement, I have limited the API fetch call to component mount rather than every searchTerm change, as searchTerm does not impact the fetched userList
+
+2. Error Handling improvement, i have added the try-catch block to api call to ensure API failure handled correctly.
+
+3. removed the dangerouslysetInnerHtml , just rendered as plain text, 
+
+4. in websocket connection, to properly clean up added the return function for close connection with the useEffect function 

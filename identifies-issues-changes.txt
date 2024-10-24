@@ -1,0 +1,16 @@
+1. Issue related to performance
+
+fetchUsers function triggers every time, searchTerm changes, but actual api does not depend on the searchTerm, this leads to unnessary api call requests
+
+ we need to optimize the useEffect to ensure data fetch occurs only when needed
+
+2. no error handling for API calls 
+
+so if api fails or returns invalid response, component will crash or behave unexpectadly
+
+we need to add proper try catch blocks to handle error state accordingly.
+
+3. to improve security, remove dangerouslysetInnerHtml, with safer content rendering
+
+4. memory management - need to clean up Webssocket connection
+modify the websocket connection to clean up when component is unmounted
